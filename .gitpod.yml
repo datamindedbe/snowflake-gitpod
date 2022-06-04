@@ -3,18 +3,8 @@ tasks:
       workdir="$(pwd)"
       tmpdir="$(mktemp -d)"
       polydir=/workspace/polynote
-      ###
-      cd $workdir
-      python -m venv .venv
-      source .venv/bin/activate
-      rm -r $polydir || :
-      cd $tmpdir
-      wget https://github.com/polynote/polynote/releases/download/0.4.5/polynote-dist.tar.gz -O polynote-dist.tar.gz
-      tar xfz polynote-dist.tar.gz
-      mv polynote /workspace/
-      cd $polydir
-      # Install polynote Python requirements
-      pip install -r requirements.txt
+    command: |
+      exit
 image:
   file: .gitpod.Dockerfile
 vscode:
