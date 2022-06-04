@@ -2,7 +2,12 @@ tasks:
   - init: |
       workdir="$(pwd)"
       tmpdir="$(mktemp -d)"
-      polydir=/workspace/polynote
+      # Create venv
+      python -m venv .venv --upgrade
+      source .venv/bin/activate
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      rm -r $tmpdir
     command: |
       exit
 image:
