@@ -2,8 +2,8 @@ tasks:
   - init: |
       workdir="$(pwd)"
       tmpdir="$(mktemp -d)"
-      # Create venv
-      python -m venv .venv --upgrade
+      # Create venv; cannot use --upgrade-deps with current version of Python
+      python -m venv .venv
       source .venv/bin/activate
       pip install --upgrade pip
       pip install -r requirements.txt
