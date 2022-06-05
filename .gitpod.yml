@@ -1,4 +1,6 @@
 tasks:
+  - command: |
+      source .gitpod/setup_environment.sh
   - init: |
       workdir="$(pwd)"
       tmpdir="$(mktemp -d)"
