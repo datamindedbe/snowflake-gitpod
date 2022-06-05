@@ -6,4 +6,4 @@ repos:
         files: \.ipynb$
         stages: [commit]
         language: system
-        entry: ./.scripts/venv_run.sh jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
+        entry: ./.pre-commit/venv_run.sh jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
