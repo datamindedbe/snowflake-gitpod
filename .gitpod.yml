@@ -1,6 +1,7 @@
 tasks:
   - command: |
       source .gitpod/setup_environment.sh
+      .gitpod/setup_snowsql.py
   - init: |
       workdir="$(pwd)"
       tmpdir="$(mktemp -d)"
