@@ -6,4 +6,4 @@ if python -c "import sys; exit(sys.prefix != sys.base_prefix)"; then
     source .venv/bin/activate
 fi
 echo "Starting Jupyter"
-exec jupyter lab --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+exec jupyter lab --ip='*' --NotebookApp.token='' --NotebookApp.password='' --app-dir=notebooks
