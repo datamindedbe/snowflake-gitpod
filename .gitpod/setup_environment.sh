@@ -4,7 +4,11 @@ vars=("SNOWFLAKE_ACCOUNT_NAME" "SNOWFLAKE_REGION" "SNOWFLAKE_USER" "SNOWFLAKE_PA
 for var in ${vars[@]}; do
     if [ -z ${!var} ]; then
         read -p "Please provide a value for ${var}: " myval
+        # Ensure that variables are exported in this shell
         declare -x "${var}=${myval}"
+        # Ensure that variables will be persisted in future Gitpod workspaces
         gp env "${var}=${myval}" > /dev/null
+        # Ensure that variables will be available in other shells in this workspace
+        echo "export ${var}=${myval}" >> ~/.bashrc
     fi
 done
