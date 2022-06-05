@@ -26,6 +26,8 @@ certifi==2022.5.18.1
     # via requests
 cffi==1.15.0
     # via argon2-cffi-bindings
+cfgv==3.3.1
+    # via pre-commit
 charset-normalizer==2.0.12
     # via requests
 debugpy==1.6.0
@@ -34,12 +36,18 @@ decorator==5.1.1
     # via ipython
 defusedxml==0.7.1
     # via nbconvert
+distlib==0.3.4
+    # via virtualenv
 entrypoints==0.4
     # via
     #   jupyter-client
     #   nbconvert
 fastjsonschema==2.15.3
     # via nbformat
+filelock==3.7.1
+    # via virtualenv
+identify==2.5.1
+    # via pre-commit
 idna==3.3
     # via
     #   anyio
@@ -127,6 +135,8 @@ nest-asyncio==1.5.5
     #   jupyter-client
     #   nbclient
     #   notebook
+nodeenv==1.6.0
+    # via pre-commit
 notebook==6.4.11
     # via
     #   -r requirements.in
@@ -148,6 +158,10 @@ pexpect==4.8.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
+platformdirs==2.5.2
+    # via virtualenv
+pre-commit==2.19.0
+    # via -r requirements.in
 prometheus-client==0.14.1
     # via
     #   jupyter-server
@@ -174,6 +188,8 @@ python-dateutil==2.8.2
     # via jupyter-client
 pytz==2022.1
     # via babel
+pyyaml==6.0
+    # via pre-commit
 pyzmq==23.1.0
     # via
     #   jupyter-client
@@ -189,6 +205,7 @@ six==1.16.0
     # via
     #   bleach
     #   python-dateutil
+    #   virtualenv
 sniffio==1.2.0
     # via anyio
 soupsieve==2.3.2.post1
@@ -199,6 +216,8 @@ terminado==0.15.0
     #   notebook
 tinycss2==1.1.1
     # via nbconvert
+toml==0.10.2
+    # via pre-commit
 tornado==6.1
     # via
     #   ipykernel
@@ -221,6 +240,8 @@ traitlets==5.2.2.post1
     #   notebook
 urllib3==1.26.9
     # via requests
+virtualenv==20.14.1
+    # via pre-commit
 wcwidth==0.2.5
     # via prompt-toolkit
 webencodings==0.5.1
