@@ -18,4 +18,5 @@ RUN tmpdir=$(mktemp -d) && \
     export SNOWSQL_LOGIN_SHELL=`pwd`/dummy && \
     export SNOWSQL_DEST=$HOME/.local/bin && \
     bash snowsql-1.2.21-linux_x86_64.bash && \
-    cd && rm -r $tmpdir
+    cd && rm -r $tmpdir && \
+    snowsql -v # this will create a default config file
