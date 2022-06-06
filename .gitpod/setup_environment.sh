@@ -3,6 +3,7 @@ vars=("SNOWFLAKE_ORGANISATION_NAME" "SNOWFLAKE_ACCOUNT_NAME" "SNOWFLAKE_USER" "S
 
 for var in ${vars[@]}; do
     if [ -z ${!var} ]; then
+        [ $has_slept ] || { sleep 4; has_slept=1; }
         read -p "Please provide a value for ${var}: " myval
         # Ensure that variables are exported in this shell
         declare -x "${var}=${myval}"
