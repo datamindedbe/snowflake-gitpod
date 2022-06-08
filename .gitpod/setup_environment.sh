@@ -5,7 +5,7 @@ for var in ${vars[@]}; do
         [ $has_slept ] || { read -p "Press enter to continue"; has_slept=1; }
         read -p "Please provide a value for ${var}: " myval
         # Ensure that variables are exported in this shell
-        # declare -x "${var}=${myval}"
+        declare -x "${var}=${myval}"
         # Ensure that variables will be persisted in future Gitpod workspaces
         gp env "${var}=${myval}" > /dev/null
         # Ensure that variables will be available in other shells in this workspace
