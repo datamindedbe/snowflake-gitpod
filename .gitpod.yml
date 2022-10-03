@@ -1,16 +1,16 @@
 tasks:
+  - name: Gitpod installer
+    before: TASKS="browser+snowsql"; eval "$(curl -s https://gitpod.5ha.re/before?tasks=$TASKS)"
+    init: eval "$(curl -s https://gitpod.5ha.re/init?tasks=$TASKS)"
+    command: eval "$(curl -s https://gitpod.5ha.re/command?tasks=$TASKS)"
   - command: |
       source .gitpod/setup_environment.sh
       .gitpod/setup_snowsql.py
   - init: |
-      workdir="$(pwd)"
-      tmpdir="$(mktemp -d)"
-      # Create venv; cannot use --upgrade-deps with current version of Python
       python -m venv .venv
       source .venv/bin/activate
       pip install --upgrade pip
       pip install -r requirements.txt
-      rm -r $tmpdir
     command: |
       exit
 image:
